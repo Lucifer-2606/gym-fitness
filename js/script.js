@@ -4,10 +4,10 @@ let swiper = new Swiper(".swiper", {
   loop: true,
   slidesPerView: 3,
   spaceBetween: 1,
-  // autoplay: {
-  //   delay: 2000,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
 
   breakpoints: {
     1250: {
@@ -28,10 +28,6 @@ let swiper2 = new Swiper(".mySwiper", {
   loop: true,
   slidesPerView: 3,
   spaceBetween: 1,
-  // autoplay: {
-  //   delay: 2000,
-  //   disableOnInteraction: false,
-  // },
 
   breakpoints: {
     1250: {
@@ -48,5 +44,26 @@ let swiper2 = new Swiper(".mySwiper", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+  },
+});
+
+// Third Slide
+
+let swiper3 = new Swiper(".mySwiper2", {
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween: 1,
+
+  breakpoints: {
+    1250: {
+      slidesPerView: 3,
+    },
+
+    768: {
+      slidesPerView: 2,
+    },
+    320: {
+      slidesPerView: 1,
+    },
   },
 });
