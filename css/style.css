@@ -1583,7 +1583,7 @@ h3 {
 
     /* Service Section */
     .trng-img {
-        max-width: 80px;
+        max-width: 178px;
     }
 
     .trng-title,
@@ -1713,6 +1713,11 @@ h3 {
 }
 
 @media screen and (max-width:425px) {
+
+    /* Service Section */
+    .trng-img {
+        max-width: 121px;
+    }
 
     /* Transformation Section */
     .title-trnsfrm2 {
