@@ -1,0 +1,38 @@
+:root {
+    --transparent-white: rgba(255, 255, 255, 0.16);
+    --transparent-white-border: rgba(255, 255, 255, 0.26);
+    --yellow-color: #f2ff00;
+    --black-color: #000000;
+    --white-color: #ffffff;
+    --login-bg-color: rgba(255, 247, 0, 0.1);
+    --text-color-50: #ffffff80;
+}
+
+
+
+.bnr-sec {
+    background: url(../assets/1.\ Hero\ Section.png) no-repeat center/cover;
+
+}
+
+.title-1 {
+    text-align: center;
+}
+
+.hero-line {
+    margin-top: 114px;
+    text-align: center;
+}
+
+.yellow-line {
+    width: 24px;
+    height: 59px;
+    background-color: var(--yellow-color);
+    display: inline-block;
+    transform: skew(-30deg);
+}
+
+.yellow-line:nth-child(1),
+.yellow-line:nth-child(2) {
+    margin-right: 10px;
+}
