@@ -1,13 +1,13 @@
 // First Slide
 
-let swiper = new Swiper(".swiper", {
+let swiper = new Swiper(".swiper1", {
   loop: true,
   slidesPerView: 3,
   spaceBetween: 1,
-  autoplay: {
-    delay: 2000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 2000,
+  //   disableOnInteraction: false,
+  // },
 
   breakpoints: {
     1250: {
@@ -28,7 +28,10 @@ let swiper2 = new Swiper(".mySwiper", {
   loop: true,
   slidesPerView: 3,
   spaceBetween: 1,
-
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
   breakpoints: {
     1250: {
       slidesPerView: 3,

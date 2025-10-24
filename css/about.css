@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Akira-font", sans-serif;
+    src: url(../assets/fonts/Akira\ Expanded\ Super\ Bold.ttf);
+}
+
 :root {
     --transparent-white: rgba(255, 255, 255, 0.16);
     --transparent-white-border: rgba(255, 255, 255, 0.26);
@@ -8,7 +13,7 @@
     --text-color-50: #ffffff80;
 }
 
-
+/* Banner Section */
 
 .bnr-sec {
     background: url(../assets/1.\ Hero\ Section.png) no-repeat center/cover;
@@ -20,7 +25,6 @@
 }
 
 .hero-line {
-    margin-top: 114px;
     text-align: center;
 }
 
@@ -32,7 +36,38 @@
     transform: skew(-30deg);
 }
 
-.yellow-line:nth-child(1),
-.yellow-line:nth-child(2) {
+.yellow-line {
     margin-right: 10px;
+}
+
+.yellow-line:last-child {
+    margin-right: 0;
+}
+
+.breadcrumb {
+    margin: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.breadcrumb-link {
+    color: var(--white-color);
+    font-family: "Akira-font", sans-serif;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    width: 8px;
+    height: 8px;
+    background-color: var(--yellow-color);
+    content: "";
+    display: inline-block;
+    float: none;
+    margin-right: 5px;
+}
+
+.breadcrumb-item.active {
+    color: var(--yellow-color);
 }

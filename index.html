@@ -14,9 +14,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Font Link -->
+    <!-- Clash-Display Font Link -->
     <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700,1&display=swap"
         rel="stylesheet">
+    <!-- Akira Font Link -->
+    <link href="https://fonts.cdnfonts.com/css/akira-expanded" rel="stylesheet">
+
     <!-- Bootstrap Css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -30,7 +33,7 @@
         <nav class="navbar navbar-expand-xl">
             <div class="container hdr-container">
                 <div class="nav-logo">
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="./index.html">
                         <img src="./assets/Logo.png" alt="">
                     </a>
                 </div>
@@ -49,10 +52,10 @@
                     </div>
                     <ul class="navbar-nav align-items-center m-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About Us</a>
+                            <a class="nav-link" href="./about.html">About </a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -93,9 +96,15 @@
                         </li>
                     </ul>
                     <div class="login-link">
-                        <a href="" class="login">login / create account
-                            <div class="login-click">
-                                <img src="./assets/login-click.png" alt="">
+                        <a href="" class="login-io-button">
+                            Login/Create Account
+                            <div class="login-icon">
+                                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                    <path
+                                        d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                        fill="currentColor"></path>
+                                </svg>
                             </div>
                         </a>
 
@@ -111,48 +120,29 @@
         <section class="bnr-sec">
             <div class="container hdr-container">
                 <div class="row bnr-row">
-                    <div class="col">
+                    <div class="col-4">
                         <div class="bnr-cntn">
                             <p class="para bnr-para">
                                 Lorem ipsum dolor sit amet consectetur. Nullam vitae leo sed scelerisque.
                             </p>
                             <div class="gym-img">
-                                <img src="./assets/Frame 4.png" alt="">
-                                <img src="./assets/Frame 5.png" alt="">
-                                <img src="./assets/Frame 7.png" alt="">
-                                <img src="./assets/Frame 6.png" alt="">
+                                <img class="gym-logo" src="./assets/Frame 4.png" alt="">
+                                <img class="gym-logo" src="./assets/Frame 5.png" alt="">
+                                <img class="gym-logo" src="./assets/Frame 7.png" alt="">
+                                <img class="gym-logo" src="./assets/Frame 6.png" alt="">
                             </div>
                             <div class="para-box">
                                 <p class="para bnr-para">
                                     <span class="para-hdr">12k +</span> Membership Enjoy Our Programs
                                 </p>
                             </div>
-                            <div class="loader-text">
-                                <div class="loader">
-                                    <hr>
-                                    <span class="s">
-                                        <i class="fa-solid fa-s"></i>
-                                    </span>
-                                    <span class="c">
-                                        <i class="fa-solid fa-c"></i>
-                                    </span>
-                                    <span class="r">
-                                        <i class="fa-solid fa-r"></i>
-                                    </span>
-                                    <span class="o">
-                                        <i class="fa-solid fa-o"></i>
-                                    </span>
-                                    <span class="l">
-                                        <i class="fa-solid fa-l"></i>
-                                    </span>
-                                    <span class="l2">
-                                        <i class="fa-solid fa-l"></i>
-                                    </span>
-                                </div>
+                            <div class="scroll">
+                                <hr>
+                                <p class="scroller">Scroll</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col-8">
                         <div class="bnr-hdr">
                             <h1 class="title-1">
                                 FocusFuel
@@ -186,7 +176,7 @@
         <!-- Fitness Card Section -->
         <section class="fitnessCard-sec">
             <div class="container card-container">
-                <div class="swiper">
+                <div class="swiper swiper1">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="fitness-slider">
@@ -411,77 +401,96 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <figure class="gym-img">
+                        <figure class="gym-abtimg">
                             <img src="./assets/gymAbtCard-img.png" alt="">
                         </figure>
                     </div>
                     <div class="col">
-                        <div class="gym-grid">
-                            <div class="gridCard grid1">
-                                <i class="fa-solid fa-check"></i>
-                                <h3 class="title-5">
-                                    Certified & Experience Coachees
-                                </h3>
-                                <p class="para2 ">
-                                    Lorem ipsum dolor sit amet consectetur. Donec justo volutpat dictumst suspendisse
-                                    sed sed at libero. Sed congue diam nisl lobortis diam ut.
-                                </p>
+                        <div class="row">
+                            <div class="col">
+                                <div class="gymAbt-cntn ms-auto">
+                                    <i class="fa-solid fa-check"></i>
+                                    <h3 class="title-5">
+                                        Certified & Experience Coachees
+                                    </h3>
+                                    <p class="para2 ">
+                                        Lorem ipsum dolor sit amet consectetur. Donec justo volutpat dictumst
+                                        suspendisse
+                                        sed sed at libero. Sed congue diam nisl lobortis diam ut.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="gridCard">
-                                <i class="fa-solid fa-check"></i>
-                                <h3 class="title-5">
-                                    Certified & Experience Coachees
-                                </h3>
-                                <p class="para2 gym-para">
-                                    Lorem ipsum dolor sit amet consectetur. Donec justo volutpat dictumst suspendisse
-                                    sed sed at libero. Sed congue diam nisl lobortis diam ut.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="gym-grid grid-box">
-                            <div class="gridCard grid1">
-                                <i class="fa-solid fa-check"></i>
-                                <h3 class="title-5">
-                                    Certified & Experience Coachees
-                                </h3>
-                                <p class="para2 ">
-                                    Lorem ipsum dolor sit amet consectetur. Donec justo volutpat dictumst suspendisse
-                                    sed sed at libero. Sed congue diam nisl lobortis diam ut.
-                                </p>
-                            </div>
-                            <div class="gridCard">
-                                <i class="fa-solid fa-check"></i>
-                                <h3 class="title-5">
-                                    Certified & Experience Coachees
-                                </h3>
-                                <p class="para2 ">
-                                    Lorem ipsum dolor sit amet consectetur. Donec justo volutpat dictumst suspendisse
-                                    sed sed at libero. Sed congue diam nisl lobortis diam ut.
-                                </p>
+                            <div class="col">
+                                <div class="gymAbt-cntn ">
+                                    <i class="fa-solid fa-check"></i>
+                                    <h3 class="title-5">
+                                        Certified & Experience Coachees
+                                    </h3>
+                                    <p class="para2 ">
+                                        Lorem ipsum dolor sit amet consectetur. Donec justo volutpat dictumst
+                                        suspendisse
+                                        sed sed at libero. Sed congue diam nisl lobortis diam ut.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="gym-grid">
-                            <div class="gridCard grid1">
-                                <i class="fa-solid fa-check"></i>
-                                <h3 class="title-5">
-                                    Certified & Experience Coachees
-                                </h3>
-                                <p class="para2 ">
-                                    Lorem ipsum dolor sit amet consectetur. Donec justo volutpat dictumst suspendisse
-                                    sed sed at libero. Sed congue diam nisl lobortis diam ut.
-                                </p>
+                        <div class="row">
+                            <div class="col">
+                                <div class="gymAbt-cntn ms-auto ">
+                                    <i class="fa-solid fa-check"></i>
+                                    <h3 class="title-5">
+                                        Certified & Experience Coachees
+                                    </h3>
+                                    <p class="para2 ">
+                                        Lorem ipsum dolor sit amet consectetur. Donec justo volutpat dictumst
+                                        suspendisse
+                                        sed sed at libero. Sed congue diam nisl lobortis diam ut.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="gridCard">
-                                <i class="fa-solid fa-check"></i>
-                                <h3 class="title-5">
-                                    Certified & Experience Coachees
-                                </h3>
-                                <p class="para2 ">
-                                    Lorem ipsum dolor sit amet consectetur. Donec justo volutpat dictumst suspendisse
-                                    sed sed at libero. Sed congue diam nisl lobortis diam ut.
-                                </p>
+                            <div class="col">
+                                <div class="gymAbt-cntn ">
+                                    <i class="fa-solid fa-check"></i>
+                                    <h3 class="title-5">
+                                        Certified & Experience Coachees
+                                    </h3>
+                                    <p class="para2 ">
+                                        Lorem ipsum dolor sit amet consectetur. Donec justo volutpat dictumst
+                                        suspendisse
+                                        sed sed at libero. Sed congue diam nisl lobortis diam ut.
+                                    </p>
+                                </div>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="gymAbt-cntn ms-auto ">
+                                    <i class="fa-solid fa-check"></i>
+                                    <h3 class="title-5">
+                                        Certified & Experience Coachees
+                                    </h3>
+                                    <p class="para2 ">
+                                        Lorem ipsum dolor sit amet consectetur. Donec justo volutpat dictumst
+                                        suspendisse
+                                        sed sed at libero. Sed congue diam nisl lobortis diam ut.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="gymAbt-cntn ">
+                                    <i class="fa-solid fa-check"></i>
+                                    <h3 class="title-5">
+                                        Certified & Experience Coachees
+                                    </h3>
+                                    <p class="para2 ">
+                                        Lorem ipsum dolor sit amet consectetur. Donec justo volutpat dictumst
+                                        suspendisse
+                                        sed sed at libero. Sed congue diam nisl lobortis diam ut.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -804,162 +813,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-slide2">
-                                <div class="rate-card">
-                                    <div class="rateCard-line">
-                                        <span class="card-line"></span>
-                                        <span class="card-line"></span>
-                                        <span class="card-line"></span>
-                                        <span class="card-line"></span>
-                                        <span class="card-line"></span>
-                                        <span class="card-line"></span>
-                                        <span class="card-line"></span>
-                                        <span class="card-line"></span>
 
-                                    </div>
-                                    <div class="frame-line ">
-                                        <img src="./assets/Frame line.png" alt="">
-                                    </div>
-                                    <h2 class="title-2 rateCard-title">
-                                        Basic
-                                    </h2>
-                                    <p class="para2">
-                                        Level up with advanced workouts and personalized guidance.
-                                    </p>
-                                    <p class="amount">
-                                        $15 <sup>/month</sup>
-                                    </p>
-                                    <ul class="rate-item">
-                                        <li class="rateItem-list">
-                                            <i class="fa-regular fa-circle-check"></i>
-                                            All Basic Features
-                                        </li>
-                                        <li class="rateItem-list">
-                                            <i class="fa-regular fa-circle-check"></i>
-                                            Unlimited Group Classes
-                                        </li>
-                                        <li class="rateItem-list">
-                                            <i class="fa-regular fa-circle-check"></i>
-                                            Progress & Body Tracking
-                                        </li>
-                                        <li class="rateItem-list">
-                                            <i class="fa-regular fa-circle-check"></i>
-                                            Locker Use
-                                        </li>
-                                    </ul>
-                                    <div class="rate-btn">
-                                        <a href="" class="membership-btn">
-                                            get membership
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-slide2">
-                                <div class="rate-card">
-                                    <div class="rateCard-line">
-                                        <span class="card-line"></span>
-                                        <span class="card-line"></span>
-                                        <span class="card-line"></span>
-                                        <span class="card-line"></span>
-                                        <span class="card-line"></span>
-                                        <span class="card-line"></span>
-                                        <span class="card-line"></span>
-                                        <span class="card-line"></span>
-
-                                    </div>
-                                    <div class="frame-line ">
-                                        <img src="./assets/Frame line.png" alt="">
-                                    </div>
-                                    <h2 class="title-2 rateCard-title">
-                                        Pro
-                                    </h2>
-                                    <p class="para2">
-                                        Level up with advanced workouts and personalized guidance.
-                                    </p>
-                                    <p class="amount">
-                                        $30 <sup>/month</sup>
-                                    </p>
-                                    <ul class="rate-item">
-                                        <li class="rateItem-list">
-                                            <i class="fa-regular fa-circle-check"></i>
-                                            All Basic Features
-                                        </li>
-                                        <li class="rateItem-list">
-                                            <i class="fa-regular fa-circle-check"></i>
-                                            Unlimited Group Classes
-                                        </li>
-                                        <li class="rateItem-list">
-                                            <i class="fa-regular fa-circle-check"></i>
-                                            Progress & Body Tracking
-                                        </li>
-                                        <li class="rateItem-list">
-                                            <i class="fa-regular fa-circle-check"></i>
-                                            Locker Use
-                                        </li>
-                                    </ul>
-                                    <div class="rate-btn">
-                                        <a href="" class="membership-btn">
-                                            get membership
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="swiper-slide2">
-                                <div class="rate-card">
-                                    <div class="rateCard-line">
-                                        <span class="card-line"></span>
-                                        <span class="card-line"></span>
-                                        <span class="card-line"></span>
-                                        <span class="card-line"></span>
-                                        <span class="card-line"></span>
-                                        <span class="card-line"></span>
-                                        <span class="card-line"></span>
-                                        <span class="card-line"></span>
-
-                                    </div>
-                                    <div class="frame-line ">
-                                        <img src="./assets/Frame line.png" alt="">
-                                    </div>
-                                    <h2 class="title-2 rateCard-title">
-                                        Elite
-                                    </h2>
-                                    <p class="para2">
-                                        Go all-in with premium coaching for maximum results.
-                                    </p>
-                                    <p class="amount">
-                                        $65 <sup>/month</sup>
-                                    </p>
-                                    <ul class="rate-item">
-                                        <li class="rateItem-list">
-                                            <i class="fa-regular fa-circle-check"></i>
-                                            All Basic Features
-                                        </li>
-                                        <li class="rateItem-list">
-                                            <i class="fa-regular fa-circle-check"></i>
-                                            Unlimited Group Classes
-                                        </li>
-                                        <li class="rateItem-list">
-                                            <i class="fa-regular fa-circle-check"></i>
-                                            Progress & Body Tracking
-                                        </li>
-                                        <li class="rateItem-list">
-                                            <i class="fa-regular fa-circle-check"></i>
-                                            Locker Use
-                                        </li>
-                                    </ul>
-                                    <div class="rate-btn">
-                                        <a href="" class="membership-btn">
-                                            get membership
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -970,7 +824,7 @@
         <section class="location-sec">
             <div class="container abt-container">
                 <div class="abt-hdr location-hdr">
-                    <h2 class="title-3">About Our Gym</h2>
+                    <h2 class="title-3">Our Location</h2>
                     <div class="frame-line abt-line">
                         <img src="./assets/Frame line.png" alt="">
                     </div>
@@ -1010,17 +864,13 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Map Section -->
-        <section class="map-sec">
-            <div class="container abt-container">
                 <figure class="map">
                     <img src="./assets/Map.png" alt="">
                 </figure>
             </div>
         </section>
+
+
 
         <!-- Transformation Section -->
         <section class="trnsfrm-sec">

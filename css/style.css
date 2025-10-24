@@ -1,8 +1,3 @@
-@font-face {
-    font-family: "Akira-font", sans-serif;
-    src: url(../assets/fonts/Akira\ Expanded\ Super\ Bold.ttf);
-}
-
 :root {
     --transparent-white: rgba(255, 255, 255, 0.16);
     --transparent-white-border: rgba(255, 255, 255, 0.26);
@@ -13,7 +8,8 @@
     --text-color-50: #ffffff80;
 }
 
-a {
+a,
+span {
     display: inline-block;
     text-decoration: none;
 }
@@ -40,7 +36,9 @@ figure {
 h1,
 h2,
 h3 {
-    font-family: "Akira-font", sans-serif;
+    font-family: 'Akira Expanded', sans-serif;
+    font-weight: 900;
+    font-style: normal;
 }
 
 /* Header Section */
@@ -69,13 +67,14 @@ h3 {
     backdrop-filter: blur(13px);
     border-radius: 56px;
     border: 1px solid var(--transparent-white-border);
-    padding: 0 5px;
+    padding: 0 5px !important;
 }
 
 .nav-link {
     padding: 10px 20px !important;
     color: var(--white-color);
     transition: all 0.5s ease-in;
+    font-size: 18px;
 
     &:hover {
         background-color: var(--black-color);
@@ -105,6 +104,7 @@ h3 {
     border-radius: 74px;
     cursor: pointer;
     padding: 10px 15px;
+    margin-right: 5px;
 }
 
 .input {
@@ -128,8 +128,7 @@ h3 {
 
 .cart-link {
     max-width: 64px;
-    height: 64px;
-    border-radius: 50%;
+
 }
 
 .cart-link>img {
@@ -138,37 +137,98 @@ h3 {
     object-fit: cover;
 }
 
-.login {
+.login-link {
+    margin-left: 12px;
+
+}
+
+
+
+
+
+
+
+
+
+
+.login-io-button {
+    background: transparent;
+    backdrop-filter: blur(5px);
+    color: var(--yellow-color);
+    padding: 20px 20px 20px 41px;
+    font-size: 18px;
+    border-radius: 37.5px;
+    border: 1px solid var(--yellow-color);
+    letter-spacing: 0.05em;
     display: flex;
     align-items: center;
-    font-size: 18px;
-    text-transform: capitalize;
-    font-weight: bolder;
-    margin-left: 12px;
-    padding: 10px;
-    background: var(--login-bg-color);
-    backdrop-filter: blur(5px);
-    border: 3px solid yellow;
-    border-radius: 1em;
-    color: var(--yellow-color);
-    transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s;
-    box-shadow: -5px 5px 0px 0px yellow;
-
-    &:hover {
-        transform: translate(5px, -5px);
-    }
+    box-shadow: inset 0 0 1.6em -0.6em #714da6;
+    overflow: hidden;
+    padding: 15px;
+    cursor: pointer;
+    position: relative;
 }
 
-.login-click {
-    max-width: 37px;
-    margin-left: 10px;
+.login-io-button .login-icon {
+    background: var(--yellow-color);
+    opacity: 0.9;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.8em;
+    width: 2.8em;
+    border-radius: 35px;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+    right: 0.3em;
+    transition: all 0.3s;
 }
 
-.login-click>img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.login-io-button:hover .login-icon {
+    width: calc(100% - 0.6em);
 }
+
+.login-io-button .login-icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: var(--black-color);
+}
+
+.login-io-button:hover .login-icon svg {
+    transform: translateX(0.1em);
+}
+
+.login-io-button:active .login-icon {
+    transform: scale(0.95);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .navbar-toggler-icon {
     font-size: 20px;
@@ -197,6 +257,33 @@ h3 {
     font-size: 20px;
     background: none;
     color: var(--tertiary-color);
+}
+
+
+.dropdown-menu {
+    background: linear-gradient(to top, rgba(255, 251, 0, 0.9) 50%, rgba(0, 0, 0, 0.9) 100%);
+    padding: 5px 19px 5px 5px !important;
+}
+
+.dropdown-menu>li {
+    margin-bottom: 5px
+}
+
+,
+.dropdown-menu>li:last-child {
+    margin-bottom: 0;
+}
+
+
+.dropdown-item {
+    padding: 10px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 350px;
+    text-transform: capitalize;
+}
+
+.dropdown-menu[data-bs-popper] {
+    top: 140%;
 }
 
 /* Banner Section */
@@ -237,23 +324,64 @@ h3 {
     margin: 40px 0;
 }
 
-.gym-img>img {
+.gym-logo {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    margin-left: -25px;
+    animation: logo 4s alternate infinite linear;
 }
 
-.gym-img>img:nth-child(2) {
-    transform: translateX(-25px);
+
+
+
+.gym-logo:nth-child(2) {
+    animation-delay: 1s;
+
 }
 
-.gym-img>img:nth-child(3) {
-    transform: translateX(-55px);
+.gym-logo:nth-child(3) {
+    animation-delay: 2s;
+
 }
 
-.gym-img>img:nth-child(4) {
-    transform: translateX(-85px);
+.gym-logo:nth-child(4) {
+    animation-delay: 3s;
+
 }
+
+@keyframes logo {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(6px);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+
+    75% {
+        transform: translateY(6px);
+    }
+
+
+}
+
+
+
+
+.gym-logo:first-child {
+    margin-left: 0;
+}
+
+
+
+
 
 .para-box {
     max-width: 300px;
@@ -263,87 +391,38 @@ h3 {
     -webkit-text-fill-color: var(--yellow-color);
 }
 
-.loader {
-    --ANIMATION-DELAY-MULTIPLIER: 100ms;
-    padding: 0;
-    margin: 0;
+
+.scroll {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    overflow: hidden;
 }
 
-.loader span {
-    padding: 0;
-    margin: 0;
-    letter-spacing: -5rem;
-    animation-delay: 0s;
-    transform: translateY(4rem);
-    animation: hideAndSeek 1s alternate infinite cubic-bezier(0.86, 0, 0.07, 1);
-    font-size: 27px;
-    color: var(--white-color);
-}
-
-.loader>hr {
+.scroll>hr {
     width: 2px;
     height: 33px;
     background-color: var(--white-color);
+    margin-right: 16.5px;
 }
 
-.loader .s {
-    animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 0);
+.scroller {
+    font-size: 27px;
+    font-weight: 500;
+    color: var(--white-color);
 }
 
-.loader .c {
-    animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 1);
-}
 
-.loader .r {
-    animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 2);
-}
 
-.loader .o {
-    animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 3);
-}
-
-.loader .l {
-    animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 4);
-}
-
-.loader .l2 {
-    animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 5);
-}
-
-.letter {
-    width: fit-content;
-    height: 3rem;
-}
-
-.i {
-    margin-inline: 5px;
-}
-
-@keyframes hideAndSeek {
-    0% {
-        transform: translateY(4rem);
-    }
-
-    100% {
-        transform: translateY(0rem);
-    }
-}
 
 .bnr-hdr {
     max-width: 1220px;
 }
 
 .title-1 {
-    font-size: 141px;
-    font-family: "Akira-font", sans-serif;
-    font-weight: 600;
+    font-size: clamp(2.8rem, calc(7vw + 1rem), 10.86rem);
     text-transform: uppercase;
     color: var(--white-color);
     position: relative;
+
 }
 
 .title1-span {
@@ -480,24 +559,30 @@ h3 {
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.card-swipe {
-    max-width: 592px;
-    padding: 50px;
-    position: relative;
+.swiper-slide {
 
+    max-width: 592px;
+}
+
+.card-swipe {
+    position: relative;
+    z-index: 999;
 }
 
 .card-swipe1 {
     background: url(../assets/card-bg1.png) no-repeat center/cover;
+    padding: 50px 178px 50px 50px;
 
 }
 
 .card-swipe2 {
+    padding: 50px 231px 50px 50px;
 
     background: url(../assets/card-bg2.png) no-repeat center/cover;
 }
 
 .card-swipe3 {
+    padding: 50px 223px 50px 50px;
     background: url(../assets/card-bg3.png) no-repeat center/cover;
 
 }
@@ -513,47 +598,46 @@ h3 {
 }
 
 .title-2 {
-    font-size: 25px;
-    font-weight: 600;
+    font-size: 22px;
     color: var(--white-color);
     text-transform: uppercase;
     margin-top: 10px;
 }
 
 .number {
-    font-family: "Akira-font", sans-serif;
+    font-family: 'Akira Expanded', sans-serif;
     font-size: 139px;
-    font-weight: 900;
     color: transparent;
     -webkit-text-stroke: 2px var(--text-color-50);
-    letter-spacing: -10px;
-    margin: 0 !important;
+
 
 }
 
 .card-img {
-    width: 196px;
+    max-width: 196px;
     position: absolute;
     right: 10px;
-    bottom: 20px;
-    transform: scale(1.1);
+    bottom: 35px;
+    transform: scale(1.18);
+
 }
 
 
 .card-img2 {
-    width: 211px;
+    max-width: 211px;
     position: absolute;
     right: 0px;
-    bottom: 20px;
-    transform: scale(1.1);
+    bottom: 35px;
+    transform: scale(1.18);
+
 }
 
 
 .card-img3 {
-    width: 485px;
+    max-width: 480px;
     position: absolute;
-    right: -24px;
-    bottom: 3px;
+    right: 0;
+    bottom: 0;
 
 }
 
@@ -625,7 +709,6 @@ h3 {
 
 .abt-img {
     max-width: 675px;
-    height: 491px;
 }
 
 .abt-img>img {
@@ -715,6 +798,7 @@ h3 {
     align-items: center;
     position: relative;
     border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+    z-index: 999;
 
     &:hover {
         border-bottom: none;
@@ -736,6 +820,7 @@ h3 {
     bottom: -4px;
     right: 13%;
     transition: all 0.3s ease;
+    z-index: -1;
 }
 
 .trng-img>img {
@@ -794,12 +879,12 @@ h3 {
 
 }
 
-.gym-img {
+.gym-abtimg {
     max-width: 698px;
 
 }
 
-.gym-img>img {
+.gym-abtimg>img {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -810,20 +895,18 @@ h3 {
 
 }
 
-.gridCard {
-    max-width: 337px;
+.gymAbt-cntn {
+    max-width: 412px;
     padding: 30px;
     z-index: 1;
     position: relative;
     border: 1px solid var(--yellow-color);
-
+    margin-bottom: 24px;
 }
 
-.grid1 {
-    margin-right: 24px;
-}
 
-.gridCard::before {
+
+.gymAbt-cntn::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -838,9 +921,9 @@ h3 {
 }
 
 .title-5 {
-    font-size: 19px;
-    font-weight: 900;
+    font-size: 16px;
     margin: 22px 0;
+    color: var(--white-color);
 }
 
 .grid-box {
@@ -945,6 +1028,8 @@ h3 {
     max-width: 591px;
     padding: 24px;
     position: relative;
+    margin: 0 auto;
+    z-index: 999;
 }
 
 .rateCard-line {
@@ -959,6 +1044,7 @@ h3 {
     background-color: var(--yellow-color);
     display: block;
     transform: skew(45deg);
+    z-index: -1;
 }
 
 
@@ -1020,7 +1106,7 @@ h3 {
     top: -10px;
     left: 0;
     width: 100%;
-    height: 20%;
+    height: 22%;
     background: url(../assets/rate-cardBG.png) no-repeat center/cover;
     transition: 0.5s;
     transform-origin: center;
@@ -1033,7 +1119,7 @@ h3 {
     top: 98%;
     left: 0%;
     width: 100%;
-    height: 20%;
+    height: 22%;
     background: url(../assets/rate-cardBG.png) no-repeat center/cover;
     transition: 0.5s;
 
@@ -1051,9 +1137,8 @@ h3 {
 /* Location Section */
 
 .location-sec {
-    padding: 80px 0;
+    padding: 80px 0 120px;
     background: url(../assets/Rate-card.png) no-repeat center/cover;
-    background-attachment: fixed;
 }
 
 .location-para {
@@ -1129,17 +1214,10 @@ h3 {
 
 }
 
-/* Map Section */
-
-.map-sec {
-    background-color: var(--black-color);
-    padding: 90px 0 130px;
-
-}
 
 .map {
     max-width: 1400px;
-    margin: 0 auto;
+    margin: 80px auto 0 !important;
 
 }
 
@@ -1152,10 +1230,10 @@ h3 {
 
 /* Transformation Section */
 .trnsfrm-sec {
-    padding-top: 468px;
+    padding: 468px 0 0;
     background: url(../assets/body-builderBg.png);
     position: relative;
-    z-index: 1;
+    z-index: 999;
 }
 
 .body-builder {
@@ -1179,6 +1257,12 @@ h3 {
     position: relative;
 }
 
+.trnsfrm-line {
+    bottom: 162px;
+    left: 46%;
+    position: absolute;
+
+}
 
 
 .line-2 {
@@ -1186,35 +1270,26 @@ h3 {
     height: 26px;
     background-color: var(--yellow-color);
     transform: skew(-45deg);
-    bottom: 162px;
-    left: 46%;
-    position: absolute;
+    margin-left: 20px;
+}
+
+.line-2:first-child {
+    margin-left: 0;
 }
 
 .title-trnsfrm {
     font-size: 45px;
-    font-weight: 900;
     color: var(--white-color);
 }
 
 .title-trnsfrm2 {
     font-size: 77px;
-    font-weight: 900;
     color: var(--yellow-color);
 }
 
 
 
-.line-2:nth-child(2) {
-    margin-left: 20px;
 
-}
-
-.line-2:nth-child(3) {
-
-    margin-left: 40px;
-
-}
 
 .trnsfrm-box {
     max-width: 1000px;
@@ -1463,7 +1538,8 @@ h3 {
 }
 
 .cssbuttons-io-button .icon {
-    background: rgba(50, 222, 2, 0.9);
+    background: var(--yellow-color);
+    opacity: 0.9;
     margin-left: 1em;
     position: absolute;
     display: flex;
@@ -1517,7 +1593,7 @@ h3 {
 
     .navbar-nav {
         margin: 50px !important;
-        padding: 10px 0;
+        padding: 10px 0 !important;
     }
 
     .nav-link {
@@ -1532,7 +1608,7 @@ h3 {
     .fa-bars,
     .fa-xmark {
         font-size: 3rem;
-        color: white;
+        color: var(--yellow-color);
     }
 
     .navbar-toggler {
@@ -1546,19 +1622,13 @@ h3 {
         flex: none;
     }
 
-    .bnr-cntn {
-        margin: 0 auto;
-        max-width: 1000px;
-    }
 
     .bnr-hdr {
         margin: 30px 0;
         max-width: 1000px;
     }
 
-    .title-1 {
-        font-size: 100px;
-    }
+
 
     .bnr-line {
         width: 109px;
@@ -1575,11 +1645,19 @@ h3 {
     }
 
     .card-img {
-        width: 196px;
+        max-width: 196px;
+        transform: none;
+        bottom: 0;
     }
 
     .card-img2 {
-        width: 200px;
+        max-width: 200px;
+        transform: none;
+        bottom: 0;
+    }
+
+    .title-2 {
+        font-size: 18px;
     }
 
     /* About Section */
@@ -1620,7 +1698,7 @@ h3 {
     }
 
     /* Gym About Section */
-    .gym-img {
+    .gym-abtimg {
         margin: 0 auto !important;
     }
 
@@ -1658,7 +1736,15 @@ h3 {
     /* Transformation Section */
 
     .trnsfrm-sec {
-        padding-top: 252px;
+        padding-top: 322px;
+    }
+
+    .title-trnsfrm {
+        font-size: 30px;
+    }
+
+    .title-trnsfrm2 {
+        font-size: 55px;
     }
 
     /* Footer Section */
@@ -1697,6 +1783,19 @@ h3 {
 }
 
 @media screen and (max-width:992px) {
+
+    /* Fitness Section */
+
+    .card-img3 {
+        max-width: 406px;
+    }
+
+    .card-img,
+    .card-img2,
+    .card-img3 {
+        z-index: -1;
+    }
+
     /* Service Section */
 
     .trng-title,
@@ -1714,32 +1813,17 @@ h3 {
     }
 
     /* Transformation Section */
-    .title-trnsfrm2 {
-        font-size: 50px;
-        color: var(--tertiary-color);
-    }
-
-    .title-trnsfrm {
-        font-size: 30px;
-    }
 
     .line-2 {
         bottom: 213px;
     }
 
-    /* Transformation Section */
 
-    .trnsfrm-sec {
-        padding-top: 136px;
-    }
 }
 
 @media screen and (max-width: 768px) {
 
     /* Banner Section */
-    .title-1 {
-        font-size: 60px;
-    }
 
     .bnr-hdr {
         max-width: 635px;
@@ -1751,8 +1835,10 @@ h3 {
 
     /* Fitness Card Section */
     .card-img3 {
-        width: 375px;
+        max-width: 375px;
     }
+
+
 
     /* About Section */
     .title-4 {
@@ -1764,18 +1850,50 @@ h3 {
     }
 
     /* Service Section */
-    .trng-img {
-        max-width: 240px;
-    }
 
     .trng-title,
     .right-arrow {
         font-size: 26px;
     }
 
+    /* Plan Section */
+    .card-line {
+        width: 12px;
+    }
+
+    /* Transformation Section */
+
+    .trnsfrm-sec {
+        padding-top: 143px;
+    }
+
+    .trnsfrm-box {
+        margin: 64px auto 0;
+    }
+
+    .title-trnsfrm2 {
+        font-size: 32px;
+    }
+
+    .trnsfrm-para {
+        font-size: 23px;
+    }
+
+    .title-trnsfrm {
+        font-size: 21px;
+    }
+
+    .trnsfrm-line {
+        bottom: 79px;
+    }
+
     /* Footer Section */
     .ftr-brandLogo {
         max-width: 300px;
+    }
+
+    .ftr-navLink {
+        font-size: 13px;
     }
 }
 
@@ -1805,9 +1923,7 @@ h3 {
         font-size: 18px;
     }
 
-    .title-1 {
-        font-size: 40px;
-    }
+
 
     .bnr-hdr {
         max-width: 290px;
@@ -1836,7 +1952,7 @@ h3 {
 
     /* Fitness Card Section */
     .card-img3 {
-        width: 310px;
+        max-width: 310px;
     }
 
     /* About Section */
@@ -1857,12 +1973,9 @@ h3 {
         padding: 83px 0 80px;
     }
 
-    .abt-row,
-    .abt-img {
-        padding: 0;
-        margin: 0 !important;
+    .abt-row {
+        padding: 0 !important;
     }
-
 
     .frame-line {
         max-width: 30px;
@@ -1973,6 +2086,8 @@ h3 {
     }
 
     /* Locaton Section */
+
+
     .cmn-para {
         font-size: 25px;
     }
@@ -2043,13 +2158,23 @@ h3 {
         right: 25%;
         top: 115%;
     }
+
+    .styled_input_bar {
+        padding: 24px;
+    }
 }
 
 @media screen and (max-width:431px) {
 
-    /* Service Section */
-    .trng-img {
-        max-width: 121px;
+    /* Fitness Section */
+    .card-img3 {
+        max-width: 280px;
+    }
+
+    /* Map Section */
+
+    .map-sec {
+        padding: 35px 0;
     }
 
     /* Transformation Section */
@@ -2057,6 +2182,7 @@ h3 {
 
     .title-trnsfrm2 {
         font-size: 25px;
+
     }
 
     .title-trnsfrm {
@@ -2078,5 +2204,8 @@ h3 {
         margin: 71px auto 0;
     }
 
+    .body-builder {
+        transform: translateX(50%) scale(1.6);
+    }
 
 }
